@@ -1,0 +1,35 @@
+[
+  {
+    "id": "2b387904-ef9e-4b36-bf5b-9d70e326d39d",
+    "description": "To  get a list of available keyboard backlight brightness controls use brightnessctl command",
+    "command": "brightnessctl --device='tpacpi::kbd_backlight' info",
+    "tags": [
+      "kbd_backlight",
+      "keyboard",
+      "backlight"
+    ],
+    "created_at": 1767068025
+  },
+  {
+    "id": "4595e694-e5bc-40c9-a728-c3c3de35b064",
+    "description": "To change the keyboard backlight brightness, set the value using brightnessctl command",
+    "command": "brightnessctl --device='tpacpi::kbd_backlight' set 1",
+    "tags": [
+      "kbd_backlight",
+      "keyboard",
+      "backlight"
+    ],
+    "created_at": 1767068151
+  },
+  {
+    "id": "85d12143-0a30-4400-aa9d-0db9923f3489",
+    "description": "script to toggle keyboard backlight every call",
+    "command": "#!/bin/bash",
+    "tags": [
+      "kdb_backlight",
+      "keyboard",
+      "backlight"
+    ],
+    "created_at": 1767068564
+  }
+]
