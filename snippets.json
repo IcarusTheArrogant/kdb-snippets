@@ -24,7 +24,7 @@
   {
     "id": "85d12143-0a30-4400-aa9d-0db9923f3489",
     "description": "script to toggle keyboard backlight every call",
-    "command": "#!/bin/bash",
+    "command": "#!/bin/bash\n\nleds_path=\"/sys/class/leds\"\nfor dir in \"$leds_path\"/input*[0-9]::scrolllock; do\n    if [ -d \"$dir\" ]; then\n        FILE=\"$dir/brightness\"\n        CONTENT=$(cat \"$FILE\")\n        if [ \"$CONTENT\" = \"0\" ]; then\n            echo \"1\" > \"$FILE\"\n        elif [ \"$CONTENT\" = \"1\" ]; then\n            echo \"0\" > \"$FILE\"\n        fi\n        exit 0\n    fi\ndone",
     "tags": [
       "kdb_backlight",
       "keyboard",
